@@ -13,7 +13,7 @@
     <title>Document</title>
 </head>
 <body>
-    {% block content %}
+    {% block styles %}
     {% endblock %}
     <nav class="navbar navbar-expand-lg navbar-light ">
   <div class="container-fluid">
@@ -52,7 +52,9 @@
     </div>
   </div>
 </nav>
+{% block content %}
 
+{% endblock %}
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
 

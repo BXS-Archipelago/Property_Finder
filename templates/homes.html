@@ -1,11 +1,41 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    
-    {% for home in homes %}
-       
-    {% endfor %}
+
+<!--  Expanding/Collapsible Section for Each Entry -->
+<div class="panel-group">
+{% for home in homes %}
+<div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree"
+      href="#{{ home._id }}">
+       <h6 class="list_title"> {{ home.list_title }} </h6>
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse"
+    id="{{ home._id }}"
+     aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+       <span>Property Type:<strong > {{ home.category_name }}</strong> </span>
+            <p>Description:<strong > {{ home.list_description }}</strong></p>
+            <p>Bedrooms:<strong > {{ home.list_bedrooms }}</strong></p>
+            <p>Price:<strong> €{{ home.list_price }}</strong></p>
+            <p>
+                {% if home.by_owner == "on" %}
+                <i class="fas fa-house-user" data-position="right">For sale by Owner: </i>
+                {% else %}
+                <i class="far fa-handshake" data-position="right"> For sale by Agent: </i>
+                {% endif %}
+                {{ home.sold_by }}</p>
+            <p><em>Added by: {{ home.created_by }}</em></p>
+
+    </div>
+    </div>
+  </div>
+ {% endfor %}
+</div>
+<main class="container">
 
 
+{% endblock %}
 
-    {% endblock %}
+    </main>
