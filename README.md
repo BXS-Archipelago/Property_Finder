@@ -1,59 +1,102 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The Property Finder Website
 
-Welcome BXS-Archipelago,
+##  A website to produce a list of Advertisements from a database stored on MongoDB
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+### By : Brian Smyth
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+# About The Site :
 
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidently make it public then you can create a new one with _Regenerate API Key_.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+With owners and selling-agents of Luxury Homes as our clients, the website is designed to attract both sellers and buyers so they can connect easily with each other.
 
 ---
 
-Happy coding!
+## Strategic Points: 
+
+- The target audience for the website will be : 
+    
+    - Age 21 to 75
+    - Professional Adults
+    - Investors in Property
+    - Individuals or Couples seeking a new luxury Home
+    - Individuals or Couples seeking a second luxury Home
+    - Individuals or Couples selling their Property
+    - Estate Agents or Sales Agents with Property interests
+    - People interested in the property market as a hobby
+    
+The visitor from the Buyer sector can easily view the listing from the front page of the site with the option to search for particular interests. The visitor who is from the Selling sector can register to create their account. Once logged in, they can create new Advertisements easily.  
+
+If the seller is the Owner of the property, they can identify themselves as such using a toggle-button. Otherwise, they will labelled as a selling agent. 
+The ads can be edited if the user wishes to change any pertinent information, or they can even change the category of "For Sale" to "Sold", but retain the ad as active on the site. Finally, they have the option to delete the ad as they deem necessary as the account-holder. 
+
+---
+
+### Noteworthy:
+
+- This is a Business-To-Client website in the interest of generating revenue for the site owner. Those placing the ads will pay a subscription fee to use the service annually without restrictions on the number of ads. 
+
+- For those property owners who wish to sell without agents, the advertising process is made simple but with a reduced subscription rate for once-off ads. 
+
+- The site will act as a catalogue for buyers to peruse, but they will need to make contact with the sellers directly but externally. Sellers will provide information on how they wish to be contacted within their ad. 
+
+- The website has an easy flow for either sellers or buyers. 
+
+---
+
+## Goals of the Site Owner: 
+
+- There must be revenue. The selling process must be easy for any parties selling their property. The Subscription price will reflect the ease and speed of advertising campaigns. 
+- Search Engines must easily find the site in buyer Searches of any common engines. 
+- The required information must be immediate and of value to anybody visiting the site for the first time. 
+- The properties listed will be luxury homes, so the site will not focus on high-volume of low-value properties. It will be available for boutique-property owners and investors. 
+- The site owners will further advertise the site in search engines and relevant marketing platforms. 
+
+
+## First-Time User Experiences: 
+- As a first time visitor, I want to easily and efficiently navigate the site.
+- I want to filter lists to find what I specifically want.
+- I want to see photographs easily without cluttering my screen.
+- I want to view the site on either small or large screen sizes. 
+
+## Repeat Visitors Experiences:
+- As a regular user, I need to log in quickly to my account.
+- I want to see all current ads that I am running on the website. 
+- I want to edit any spelling or grammar mistakes, or misinformation.
+- I want to change the status of the property from "For Sale" to "Sold" easily.
+
+## Casual Browsers
+- I enjoy seeing photos of luxury houses on the market. 
+- I want to see what property values are like at the moment. 
+- I want to search only for the type of property that I like, or other pertinent criteria in the descriptions. 
+- I want to see what sales agents are hired for the sale. 
+
+---
+
+## Site Scope 
+- Advertising 
+- Property Sales
+- Connecting Sellers with Buyers
+- Trends
+
+--- 
+## Skeleton Points:
+-  An easy Navigation bar will be present across all pages, to provide links to the target destination.
+- The Home Page will contain some relevant points about the site, but the main feature is the Property Listing on this page.
+- The Register page will require you to create a Username and Password,and they must be at least 5 characters of either letters or numbers. 
+- The Log In page will request your User Name and your password. If either is incorrect, you will receive an alert that you must try again. 
+- My Profile page will display only the advertisements that you have created, with buttons for editing and deleting.
+- The Place Ad page will offer several input fields to allow the Subscribed user to create an Ad with title, description, price, etc, with the option to insert URLs for 3 photos. 
+- The Log Out function ends the user's session on the site and they must log in again to use their account. 
+
+--- 
+## Site Surface Points
+
+
+### Color Scheme
+
+
+### Typography
+
+
+### Images and Visuals
