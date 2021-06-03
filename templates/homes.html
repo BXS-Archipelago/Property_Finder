@@ -1,13 +1,9 @@
-{% extends 'base.html %}
+{% extends 'base.html' %}
 
 {% block content %}
     
     {% for home in homes %}
-        
-            <span>Property Type:<strong class="red-text text-darken-4"> {{ home.category_name }}</strong> </span>
-            <p>Description:<strong class="red-text text-darken-4"> {{ home.list_description }}</strong></p>
-            <p>Bedrooms:<strong class="red-text text-darken-4"> {{ home.list_bedrooms }}</strong></p>
-            <p>Price:<strong class="red-text text-darken-4"> €{{ home.list_price }}</strong></p>
+       
     {% endfor %}
 
 

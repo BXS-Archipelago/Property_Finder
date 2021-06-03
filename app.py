@@ -24,7 +24,7 @@ mongo =PyMongo(app)
 @app.route("/")
 @app.route("/get_homes")
 def get_homes():
-    
+    homes = list(mongo.db.homes.find())
     return render_template("homes.html", homes=homes)
 
 
@@ -37,6 +37,5 @@ def get_homes():
 
 
 
-    if __name__ == "__main__":
-        app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")),
-        debug=True)
+if __name__ == "__main__":
+    app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")),debug=True)
