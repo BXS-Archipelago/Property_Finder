@@ -1,41 +1,48 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<!--  Expanding/Collapsible Section for Each Entry -->
-<div class="panel-group">
-{% for home in homes %}
-<div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree"
-      href="#{{ home._id }}">
-       <h6 class="list_title"> {{ home.list_title }} </h6>
-      </button>
-    </h2>
-    <div id="flush-collapseThree" class="accordion-collapse collapse"
-    id="{{ home._id }}"
-     aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-       <span>Property Type:<strong > {{ home.category_name }}</strong> </span>
-            <p>Description:<strong > {{ home.list_description }}</strong></p>
-            <p>Bedrooms:<strong > {{ home.list_bedrooms }}</strong></p>
-            <p>Price:<strong> €{{ home.list_price }}</strong></p>
-            <p>
-                {% if home.by_owner == "on" %}
-                <i class="fas fa-house-user" data-position="right">For sale by Owner: </i>
-                {% else %}
-                <i class="far fa-handshake" data-position="right"> For sale by Agent: </i>
-                {% endif %}
-                {{ home.sold_by }}</p>
-            <p><em>Added by: {{ home.created_by }}</em></p>
-
-    </div>
-    </div>
-  </div>
- {% endfor %}
+<div class=" row lead-img">
+    
+<div class="col-sm-12 col-md-6 mt-4 img-holder">
+<img src="../static/img/imgp1.jpg" class="img-item" alt="house for sale">
 </div>
-<main class="container">
 
+</div>
+<!--  Expanding/Collapsible Section for Each Entry -->
+<div class="row row-cols-1 row-cols-sm-2 p-3">
+
+{% for home in homes %}
+<div class="col-sm-3"></div>
+<div class="col-sm-6 mt-4">
+<div class="card text-center">
+  <div class="card-header">
+     <h6 class="list_title"> {{ home.list_title }} </h6>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"> {{ home.category_name }}</h5>
+    <p class="card-text">{{ home.list_description }}</p>
+    <p class="card-text">{{ home.list_bedrooms }} Bedrooms</p>
+    <p class="card-text">{{ home.list_price }}</p>
+    <p class="card-text">{{ home.sold_by }}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+  <div class="card-footer text-muted">
+    Added by: {{ home.created_by }}
+  </div>
+</div>
+</div>
+<div class="col-sm-3"></div>
+ {% endfor %}
+ 
+</div>
+<div class=" row lead-img">
+    
+<div class="col-sm-12 col-md-6 mt-4 img-holder">
+<img src="../static/img/img8.jpg" class="img-item mb-4" alt="house for sale">
+</div>
+
+</div>
 
 {% endblock %}
 
-    </main>
+ 
