@@ -72,7 +72,7 @@ def login():
                     flash("Welcome, {}".format(request.form.get("username")))
                     return redirect(url_for("profile", username=session["user"]))
             else:
-                #invalid password match
+                # invalid password match
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for('login'))
 
@@ -80,9 +80,19 @@ def login():
             # if username doesn't exist
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
-
         
     return render_template("login.html")
+
+
+
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    # this grabs the session user's username from db
+    username =mongo.db.users.find_one({"username": session["user"]})["username"]
+    # List the current ads to be filtered on the page
+    homes = list(mongo.db.homes.find())
+    if session["user"]:
+        return render_template("profile.html", username=username, homes=homes)
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")),debug=True)

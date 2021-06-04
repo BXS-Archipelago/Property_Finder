@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Create BS5 Card to contain Form Inputs for Login -->
+<div class="row">
+<div class="card col-md-6 offset-md-3">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ username }}'s Profile Page</h5>
+    <p class="card-text">Your current advertisements are listed below</p>
+   
+  </div>
+</div>
+</div>
+</div>
+<!--  Expanding/Collapsible Section for Each Entry -->
+<div class="row row-cols-1 row-cols-sm-2 p-3">
+
+{% for home in homes %}
+{% if session.user|lower == home.created_by|lower %}
+<div class="col-sm-3"></div>
+<div class="col-sm-6 mt-4">
+<div class="card text-center card-shadow">
+  <div class="card-header">
+     <h6 class="list_title"> {{ home.list_title }} </h6>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"> {{ home.category_name }}</h5>
+    <p class="card-text">{{ home.list_description }}</p>
+    <p class="card-text">{{ home.list_bedrooms }} Bedrooms</p>
+    <p class="card-text">{{ home.list_price }}</p>
+    <p class="card-text">{{ home.sold_by }}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+  <div class="card-footer text-muted">
+    Added by: {{ home.created_by }}
+  </div>
+</div>
+</div>
+<div class="col-sm-3"></div>
+ {% endif %}
+ {% endfor %}
+
+</div>
+<div class=" row lead-img">
+    
+<div class="col-sm-12 col-md-6 mt-4 img-holder">
+<img src="../static/img/img4a.jpg" class="img-item mb-4" alt="house for sale">
+</div>
+
+</div>
+
+
+{% endblock %}
