@@ -35,3 +35,9 @@ body {
 .card-shadow {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+.p-text {
+    font-size: 10px;
+    color: #000;
+    font-weight: bold;
+}

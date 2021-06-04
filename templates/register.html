@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+<form class=" col-6 offset-3 card mt-5 card-shadow" method="POST" action="{{ url_for('register')}}" >
+  <div class="card-body ">
+    <h5 class="card-title fs-3">Register</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Please register below to begin advertising with us.</h6>
+    <p class="p-text">(Usernames and passwords : upper & lower case letters & numbers, between 5 & 15 characters length please)</p>
+    <div class="input-group input-group-sm mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-sm">Username</span>
+ 
+  <input id="username" name = "username" type="text" minlength ="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+
+</div>
+
+<div class="input-group input-group-sm mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-sm">Password</span>
+  <input id="password" name="password" type="password" minlength = "5" maxlength="15"  pattern="^[a-zA-Z0-9]{5,15}$" class="form-control validate" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+  </div>
+  <button type="button" class="btn btn-secondary" type="submit">Register</button>
+  <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</form>
+</div>
+{% endblock %}
