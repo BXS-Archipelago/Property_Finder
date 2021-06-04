@@ -8,13 +8,13 @@
 
 <div class="row">
     <div class=" col-6 offset-3 card mt-5 card-shadow">
-        <h5 class="fs-3 pt-3">Register</h5>
+        <h5 class="fs-3 pt-3">Log In</h5>
         <div class="card-body">
 
             <h6 class="card-text mb-2 text-muted">Please register below to begin advertising with us.</h6>
             <p class="p-text">(Usernames and passwords : upper & lower case letters & numbers, between 5 & 15 characters
                 length please)</p>
-            <form  action="{{ url_for('register') }}" method="POST">
+            <form  action="{{ url_for('login') }}" method="POST">
 
                 <!-- username input -->
                 <div class="input-group input-group-sm mb-3">
@@ -33,7 +33,7 @@
                         </div>
                         <!-- button -->
                         <div class="class"><button type="submit" class="text-shadow">
-                                Register
+                                Log In
                             </button>
             </form>
 
@@ -41,10 +41,9 @@
     </div>
 </div>
 
-
 <div class="row">
     <div class="col s-12 ">
-        Already Registered? <a href="{{ url_for('login') }}" class="text-danger">Login Here</a>
+        If you haven't registered yet? <a href="{{ url_for('register') }}" class="text-danger">Register Here</a>
     </div>
 </div>
 <div class=" row lead-img">
