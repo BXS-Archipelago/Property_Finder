@@ -2,15 +2,16 @@
 
 {% block content %}
 
-<div class="col-md-6 offset-md-3 h3">Create a new advertisement</div>
+<div class="col-md-6 offset-md-3 mt-5 h3">Create a new advertisement</div>
 
 <!-- Create the form for entering Ad details -->
 <div class="row">
 <form  class="col-md-6 offset-md-3 g-3 align-items-center" action="{{ url_for('add_home') }}" method = "POST">
-
+<div class="toptext">Please choose from the dropdown menu: </div>
     <!-- Dropdown for property categories -->
-     <select class="form-select mb-3" aria-label="Default select example">
-  <option selected>Choose Property Type</option>
+     <select class="form-select mb-3 form-control " aria-label="Default select example"  required>
+         
+  <option>Please Pick a Category</option>
   {% for category in categories %}
   <option value="{{ category.category_name }}">{{ category.category_name }}</option>
   {% endfor %}
@@ -48,6 +49,7 @@
                     <input id="list_bedrooms" name="list_bedrooms" type="text" minlength="1" maxlength="3"
                        class="validate form-control" pattern="^[0-9]{1,3}$" required>
                     <label for="list_bedrooms"></label>
+                    
                 </div>
 
 <!-- Input Price  -->

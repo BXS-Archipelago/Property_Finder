@@ -85,5 +85,13 @@ body {
 
 .signs {
     padding: 6px;
+}
 
+.edit {
+    background-color: #a239ca;
+}
+
+.delete {
+    background-color: #000;
+    color: #fff;
 }
