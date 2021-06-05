@@ -94,5 +94,14 @@ def profile(username):
     if session["user"]:
         return render_template("profile.html", username=username, homes=homes)
 
+
+
+@app.route("/logout")
+def logout():
+    # this removes user from session cookies
+    flash("Thanks, you are now logged out. ")
+    session.pop("user")
+    return redirect(url_for("login"))
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")),debug=True)
