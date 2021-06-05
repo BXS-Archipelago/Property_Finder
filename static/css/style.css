@@ -49,3 +49,24 @@ body {
     border-radius: 7px;
     box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 5px;
 }
+
+.card-header {
+    background: #5bf1db;
+   }
+
+.card-body {
+    
+}
+.card-footer {
+    background-color: #f5f1f2d3;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+    letter-spacing: 1px;
+}
+.list_title {
+   font-size: 1.6rem;
+   font-weight: 700;
+   letter-spacing: 1.2px;
+}
+ 
+
