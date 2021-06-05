@@ -52,11 +52,9 @@ body {
 
 .card-header {
     background: #5bf1db;
+    margin: 0;
    }
 
-.card-body {
-    
-}
 .card-footer {
     background-color: #f5f1f2d3;
     font-weight: bold;
@@ -69,4 +67,23 @@ body {
    letter-spacing: 1.2px;
 }
  
+.sold {
+    color: #fff;
+    background-color: red;
+    padding: 5px;
+    width: 100px;
+    box-shadow: rgba(0, 0, 0, 0.55) 2px 2px 3px;
+} 
 
+.sale {
+    color: #fff;
+    background-color: limegreen;
+    padding: 5px;
+    width: 100px;
+    box-shadow: rgba(0, 0, 0, 0.55) 2px 2px 3px;
+}
+
+.signs {
+    padding: 6px;
+
+}
