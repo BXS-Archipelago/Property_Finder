@@ -6,10 +6,10 @@
 
 <!-- Create the form for entering Ad details -->
 <div class="row">
-<form  class="col-md-6 offset-md-3 g-3 align-items-center" action="/html/tags/html_form_tag_action.cfm">
+<form  class="col-md-6 offset-md-3 g-3 align-items-center" action="{{ url_for('add_home') }}" method = "POST">
 
     <!-- Dropdown for property categories -->
-     <select class="form-select" aria-label="Default select example">
+     <select class="form-select mb-3" aria-label="Default select example">
   <option selected>Choose Property Type</option>
   {% for category in categories %}
   <option value="{{ category.category_name }}">{{ category.category_name }}</option>
@@ -19,7 +19,7 @@
 <!-- Input Headline -->
     
 
-     <div class="input-group input-group-sm mb-3 mt-5 form-spacing">
+     <div class="input-group input-group-sm mb-3 mt-2 form-spacing">
                     <span class="input-group-text col-1.5" id="inputGroup-sizing-sm">Headline : </span>
 
                     <input id="list_title" name="list_title" type="text" minlength="5" maxlength="100"
@@ -31,7 +31,7 @@
 <!-- Input Description -->
 
 
-     <div class="input-group input-group-sm mb-3 mt-5 form-spacing">
+     <div class="input-group input-group-sm mb-3 mt-2 form-spacing">
                     <span class="input-group-text col-1.5" id="inputGroup-sizing-sm">Description : </span>
 
                     <input id="list_description" name="list_description" type="text" minlength="5" maxlength="300"
@@ -42,7 +42,7 @@
 <!-- Input # Bedrooms numbers only-->
 
 
-     <div class="input-group input-group-sm mb-3 mt-5 form-spacing">
+     <div class="input-group input-group-sm mb-3 mt-2 form-spacing">
                     <span class="input-group-text col-1.5" id="inputGroup-sizing-sm">Bedrooms : </span>
 
                     <input id="list_bedrooms" name="list_bedrooms" type="text" minlength="1" maxlength="3"
@@ -53,7 +53,7 @@
 <!-- Input Price  -->
 
         
-     <div class="input-group input-group-sm mb-3 mt-5 form-spacing">
+     <div class="input-group input-group-sm mb-3 mt-2 form-spacing">
                     <span class="input-group-text col-1.5" id="inputGroup-sizing-sm">Price : </span>
 
                     <input id="list_price" name="list_price" type="text" minlength="1" maxlength="10"
@@ -65,7 +65,7 @@
 <!-- Input Description -->
 
 
-     <div class="input-group input-group-sm mb-3 mt-5 form-spacing">
+     <div class="input-group input-group-sm mb-3 mt-2 form-spacing">
                     <span class="input-group-text col-1.5" id="inputGroup-sizing-sm">Contact Details : </span>
 
                     <input id="sold_by" name="sold_by" type="text" minlength="5" maxlength="300"
@@ -83,7 +83,7 @@
 
 <!-- Input Image1 -->
 
-     <div class="input-group input-group-sm mb-3 mt-5 form-spacing">
+     <div class="input-group input-group-sm mb-3 mt-2 form-spacing">
                     <span class="input-group-text col-1.5" id="inputGroup-sizing-sm">Image URL : </span>
 
                     <input id="list_image1" name="list_image1" type="text" minlength="5" 
@@ -93,7 +93,7 @@
 
 <!-- Input Image2 -->
 
-     <div class="input-group input-group-sm mb-3 mt-5 form-spacing">
+     <div class="input-group input-group-sm mb-3 mt-2 form-spacing">
                     <span class="input-group-text col-1.5" id="inputGroup-sizing-sm">Image URL : </span>
 
                     <input id="list_image2" name="list_image2" type="text" minlength="5" 
@@ -103,7 +103,7 @@
                 
 <!-- Input Image3 -->
 
-     <div class="input-group input-group-sm mb-3 mt-5 form-spacing">
+     <div class="input-group input-group-sm mb-3 mt-2 form-spacing">
                     <span class="input-group-text col-1.5" id="inputGroup-sizing-sm">Image URL : </span>
 
                     <input id="list_image3" name="list_image3" type="text" minlength="5" 
