@@ -32,7 +32,7 @@
           <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">My Profile</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Place Ad</a>
+          <a class="nav-link" href="{{ url_for('add_home) }}">Place Ad</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
