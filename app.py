@@ -131,6 +131,26 @@ def add_home():
 @app.route("/edit_home/<home_id>", methods =["GET", "POST"])
 def edit_home(home_id):    
     if request.method =="POST":
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "list_title": request.form.get("list_title"),
+            "list_description": request.form.get("list_description"),
+            "list_bedrooms": request.form.get("list_bedrooms"),
+            "list_price": request.form.get("list_price"),
+            "sold_by": request.form.get("sold_by"),
+            "sale_sold": request.form.get("sale_sold"),
+            "list_image1" : request.form.get("list_image1"),
+            "list_image2" : request.form.get("list_image2"),
+            "list_image3" : request.form.get("list_image3"),
+            "created_by": session['user']
+            }
+        mongo.db.homes.update({"_id": ObjectId(home_id)},submit)
+        flash("Property Successfully updated")
+    categories= mongo.db.categories.find().sort("category_name", 1)
+    home = mongo.db.homes.find_one({"_id":ObjectId(home_id)})
+    categories= mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_home.html", home=home, categories=categories)
+    
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")),debug=True)
