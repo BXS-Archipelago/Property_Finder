@@ -112,3 +112,12 @@ body {
     font-family: "Source Sans Pro", 'Times New Roman', Times, serif;
     letter-spacing: 1px;
 }
+
+.edit-here {
+    background-color: #ebdfdf;
+    padding: 5px;
+    font-family: "Source Sans Pro", 'Times New Roman', Times, serif;
+    box-shadow: rgba(0, 0, 0, 0.55) 2px 2px 3px;
+    border-radius: 7px;
+    font-weight: bold;
+}

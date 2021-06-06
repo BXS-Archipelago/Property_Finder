@@ -104,11 +104,10 @@ def logout():
     return redirect(url_for("login"))
 
 
-
 @app.route("/add_home", methods=["GET", "POST"])
 def add_home():
     if request.method =="POST":
-        by_owner = "on" if request.form.get("by_owner") else "off"
+       
         home = {
             "category_name": request.form.get("category_name"),
             "list_title": request.form.get("list_title"),
@@ -123,7 +122,7 @@ def add_home():
             "list_image3" : request.form.get("list_image3")
             }
         mongo.db.homes.insert_one(home)
-        flash("Your New Property Was Successfully Added.")
+        flash("Property Successfully Added")
     categories= mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_home.html", categories=categories)
     
@@ -132,7 +131,7 @@ def add_home():
 def edit_home(home_id):    
     if request.method =="POST":
         submit = {
-            "category_name": request.form.get("category_name"),
+           "category_name": request.form.get("category_name"),
             "list_title": request.form.get("list_title"),
             "list_description": request.form.get("list_description"),
             "list_bedrooms": request.form.get("list_bedrooms"),
@@ -146,10 +145,19 @@ def edit_home(home_id):
             }
         mongo.db.homes.update({"_id": ObjectId(home_id)},submit)
         flash("Property Successfully updated")
-    categories= mongo.db.categories.find().sort("category_name", 1)
+   
     home = mongo.db.homes.find_one({"_id":ObjectId(home_id)})
     categories= mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_home.html", home=home, categories=categories)
+
+
+@app.route("/search", methods = ["POST", "GET"])
+def search():
+    mongo.db.homes.create_index([("category_name","text"),("list_description","text")])
+    query=request.form.get('text')
+    result = list(mongo.db.homes.find({"$text": {"$search": query}}))
+    mongo.db.homes.drop_indexes()
+    return render_template("homes.html", homes=result)
 
 
 @app.route("/delete_home/<home_id>")

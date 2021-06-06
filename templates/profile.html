@@ -29,7 +29,7 @@
                 {% else %}
                 <div class="sale border border-dark border-1 rounded">For Sale!</div>
             {% endif %}</div>
-     <h6 class="list_title col-6"> {{ home.list_title }} </h6>
+     <h6 class="list_title col-6">{{ home.category_name }}  </h6>
      <div class="col-3 signs">
          
                 <a href="{{ url_for('delete_home', home_id=home._id) }} "
@@ -40,7 +40,7 @@
      </div>
   </div>
   <div class="card-body">
-    <h5 class="card-title"> {{ home.category_name }}</h5>
+    <h5 class="card-title">{{ home.list_title }} </h5>
     <p class="card-text">{{ home.list_description }}</p>
     <p class="card-text">{{ home.list_bedrooms }} Bedrooms</p>
     <p class="card-text">{{ home.list_price }}</p>
