@@ -123,10 +123,22 @@ def add_home():
             "list_image3" : request.form.get("list_image3")
             }
         mongo.db.homes.insert_one(home)
-        flash("Your New Property Was Successfully Added")
+        flash("Your New Property Was Successfully Added.")
     categories= mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_home.html", categories=categories)
+    
 
+@app.route("/edit_home/<home_id>", methods =["GET", "POST"])
+def edit_home(home_id):    
+    if request.method =="POST":
+        by_owner = "on" if request.form.get("by_owner") else "off"
+       
+        mongo.db.homes.update({"_id": ObjectId(home_id)},submit)
+        flash("Property Successfully updated")
+    categories= mongo.db.categories.find().sort("category_name", 1)
+    home = mongo.db.homes.find_one({"_id":ObjectId(home_id)})
+    categories= mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_home.html", home=home, categories=categories)
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")),debug=True)

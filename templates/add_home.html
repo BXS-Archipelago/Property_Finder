@@ -11,7 +11,7 @@
     <!-- Dropdown for property categories -->
      <select class="form-select mb-3 form-control " aria-label="Default select example"  required>
          
-  <option>Please Pick a Category</option>
+  <option value ="">Please Pick a Category</option>
   {% for category in categories %}
   <option value="{{ category.category_name }}">{{ category.category_name }}</option>
   {% endfor %}
