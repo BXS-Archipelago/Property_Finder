@@ -150,7 +150,14 @@ def edit_home(home_id):
     home = mongo.db.homes.find_one({"_id":ObjectId(home_id)})
     categories= mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_home.html", home=home, categories=categories)
-    
 
+
+@app.route("/delete_home/<home_id>")
+def delete_home(home_id):
+    mongo.db.homes.remove({"_id": ObjectId(home_id)})
+    flash("Your Listing has been Deleted.")
+    return redirect(url_for("get_homes"))
+
+    
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")),debug=True)
