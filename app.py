@@ -106,8 +106,7 @@ def logout():
 
 @app.route("/add_home", methods=["GET", "POST"])
 def add_home():
-    if request.method =="POST":
-       
+    if request.method =="POST":       
         home = {
             "category_name": request.form.get("category_name"),
             "list_title": request.form.get("list_title"),
@@ -160,6 +159,12 @@ def search():
     return render_template("homes.html", homes=result)
 
 
+@app.route("/view_home/<id>")
+def view_home(id):
+    current_home = mongo.db.homes.find_one({"_id": ObjectId(id)})
+    return render_template("view_home.html", home=current_home)
+
+
 @app.route("/delete_home/<home_id>")
 def delete_home(home_id):
     mongo.db.homes.remove({"_id": ObjectId(home_id)})
@@ -169,3 +174,4 @@ def delete_home(home_id):
     
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")),debug=True)
+
