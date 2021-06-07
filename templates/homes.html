@@ -33,7 +33,7 @@
     <p class="card-text txt-3">{{ home.list_bedrooms }} Bedrooms</p>
     <p class="card-text txt-4">{{ home.list_price }}</p>
     <p class="card-text txt-2">{{ home.sold_by }}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="{{ home.view_home }}" class="btn btn-primary">Go somewhere</a>
   </div>
   <div class="card-footer text-muted">
     Added by: {{ home.created_by }}

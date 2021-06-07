@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class=" row lead-img">
+    
+<div class="col-sm-12 col-md-6 mt-4 img-holder">
+<img src="../static/img/imgp1.jpg" class="img-item" alt="house for sale">
+</div>
+</div>
+
+
+<div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+
+
+    
+
+<!-- Carousel for 3 Image URLs -->
+{% for home in homes %}
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{ home.list_image1 }}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ home.list_image2 }}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ home.list_image3 }}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!--  Expanding/Collapsible Section for Each Entry -->
+ 
+ {% endfor %}
+ </div>
+
+
+
+<div class=" row lead-img">
+    
+<div class="col-sm-12 col-md-6 mt-4 img-holder">
+<img src="../static/img/img8.jpg" class="img-item mb-4" alt="house for sale">
+</div>
+
+</div> 
+
+{% endblock %}
+
+ 

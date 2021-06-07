@@ -159,11 +159,6 @@ def search():
     return render_template("homes.html", homes=result)
 
 
-@app.route("/view_home/<id>")
-def view_home(id):
-    current_home = mongo.db.homes.find_one({"_id": ObjectId(id)})
-    return render_template("view_home.html", home=current_home)
-
 
 @app.route("/delete_home/<home_id>")
 def delete_home(home_id):
