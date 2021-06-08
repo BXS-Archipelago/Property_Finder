@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class=" row lead-img">
+<div class=" row lead-img g-0">
     
 <div class="col-sm-12 col-md-6 mt-4 img-holder">
 <img src="../static/img/imgp1.jpg" class="img-item" alt="house for sale">
@@ -18,6 +18,7 @@
 <div class="col-sm-3"></div>
 <div class="col-sm-6 mt-4">
 <div class="card text-center card-shadow g-0">
+    
   <div class="card-header row g-0">
       <div class="col-3 signs">{% if home.sale_sold == "on" %}
                 <div class=" border border-dark border-1 rounded sold">Sold!</div>
@@ -27,13 +28,18 @@
      <h6 class="list_title col-6">{{ home.category_name }}  </h6>
      <div class="col-3"></div>
   </div>
-  <div class="card-body">
+  <div class="info-img">
+  <div class="card-body col-6">
     <h5 class="card-title txt-1">{{ home.list_title }} </h5>
-    <p class="card-text txt-2">{{ home.list_description }}</p>
+    <p class="card-text txt-2">Description: {{ home.list_description }}</p>
     <p class="card-text txt-3">{{ home.list_bedrooms }} Bedrooms</p>
-    <p class="card-text txt-4">{{ home.list_price }}</p>
+    <p class="card-text txt-4">Price €{{ home.list_price }}</p>
     <p class="card-text txt-2">{{ home.sold_by }}</p>
-    <a href="{{ home.view_home }}" class="btn btn-primary">Go somewhere</a>
+    <a href="/view_home/{{ home._id }} " class="btn btn-primary">View Listing</a>    
+  </div>
+  <div class="col-6 ml-auto img-cntr">
+  <img src="{{ home.list_image1 }}" class="img-thumbnail right" alt="...">
+  </div>
   </div>
   <div class="card-footer text-muted">
     Added by: {{ home.created_by }}

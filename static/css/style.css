@@ -3,18 +3,19 @@
 body {
     padding: 0;
     margin: 0;
+    background: #f4f4f4
 }
 
 .navbar {
-    background-color: #5bf1db;
+    background-color: #93c178;
 }
 
 .text-nav {
     font-family: "Montserrat" 'Times New Roman', Times, serif;
     font-weight: 600;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+    padding-left: 15px;
 }
-
 .lead-img {
     display: flex;
     justify-content: center;
@@ -51,7 +52,7 @@ body {
 }
 
 .card-header {
-    background: #5bf1db;
+    background: #a9b7c0;
     margin: 0;
    }
 
@@ -120,4 +121,21 @@ body {
     box-shadow: rgba(0, 0, 0, 0.55) 2px 2px 3px;
     border-radius: 7px;
     font-weight: bold;
+}
+
+.info-img{
+    display: flex;
+    flex-direction: row;
+}
+
+.img-cntr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.img-thumbnail {
+    height: 150px;
+    width: 150px;
 }

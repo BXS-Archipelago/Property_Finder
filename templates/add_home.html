@@ -6,12 +6,14 @@
 
 <!-- Create the form for entering Ad details -->
 <div class="row">
+
+
 <form  class="col-md-6 offset-md-3 g-3 align-items-center" action="{{ url_for('add_home') }}" method = "POST">
 <div class="toptext">Please choose from the dropdown menu: </div>
-    <!-- Dropdown for property categories -->
 
-    <select class="form-select mb-3 form-control " aria-label="Default  example" required>                
-        <option value ="" disabled selected>Property Type</option>
+    <!-- Dropdown for property categories -->
+    <select id="category_name" name="category_name" class="form-select mb-3 form-control " aria-label="Default  example" required>                
+       
         
         {% for category in categories %}
             <option value="{{ category.category_name }}">{{ category.category_name }}</option>  

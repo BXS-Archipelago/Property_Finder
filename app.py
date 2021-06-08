@@ -144,7 +144,8 @@ def edit_home(home_id):
             }
         mongo.db.homes.update({"_id": ObjectId(home_id)},submit)
         flash("Property Successfully updated")
-   
+        
+    categories= mongo.db.categories.find().sort("category_name", 1)
     home = mongo.db.homes.find_one({"_id":ObjectId(home_id)})
     categories= mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_home.html", home=home, categories=categories)
@@ -158,6 +159,11 @@ def search():
     mongo.db.homes.drop_indexes()
     return render_template("homes.html", homes=result)
 
+
+@app.route("/view_home/<id>")
+def view_home(id):
+    current_home = mongo.db.homes.find_one({"_id": ObjectId(id)})
+    return render_template("view_home.html", home=current_home)
 
 
 @app.route("/delete_home/<home_id>")
