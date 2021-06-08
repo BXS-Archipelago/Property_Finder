@@ -106,7 +106,11 @@ def logout():
 
 @app.route("/add_home", methods=["GET", "POST"])
 def add_home():
-    if request.method =="POST":       
+    if request.method =="POST":     
+        if not request.form.get("sale_sold"):
+            sale_sold = "off"
+        else:
+            sale_sold="on"  
         home = {
             "category_name": request.form.get("category_name"),
             "list_title": request.form.get("list_title"),
@@ -114,7 +118,7 @@ def add_home():
             "list_bedrooms": request.form.get("list_bedrooms"),
             "list_price": request.form.get("list_price"),
             "sold_by": request.form.get("sold_by"),
-            "sale_sold": request.form.get("sale_sold"),
+            "sale_sold": sale_sold,
             "created_by": session['user'],
             "list_image1" : request.form.get("list_image1"),
             "list_image2" : request.form.get("list_image2"),
@@ -123,12 +127,19 @@ def add_home():
         mongo.db.homes.insert_one(home)
         flash("Property Successfully Added")
     categories= mongo.db.categories.find().sort("category_name", 1)
+    print(request.form.get("sale_sold"))
     return render_template("add_home.html", categories=categories)
     
 
 @app.route("/edit_home/<home_id>", methods =["GET", "POST"])
 def edit_home(home_id):    
     if request.method =="POST":
+        if request.method =="POST":     
+            if not request.form.get("sale_sold"):
+                sale_sold = "off"
+            else:
+                sale_sold="on" 
+
         submit = {
            "category_name": request.form.get("category_name"),
             "list_title": request.form.get("list_title"),
@@ -136,7 +147,7 @@ def edit_home(home_id):
             "list_bedrooms": request.form.get("list_bedrooms"),
             "list_price": request.form.get("list_price"),
             "sold_by": request.form.get("sold_by"),
-            "sale_sold": request.form.get("sale_sold"),
+            "sale_sold": sale_sold,
             "list_image1" : request.form.get("list_image1"),
             "list_image2" : request.form.get("list_image2"),
             "list_image3" : request.form.get("list_image3"),
@@ -157,7 +168,9 @@ def search():
     query=request.form.get('text')
     result = list(mongo.db.homes.find({"$text": {"$search": query}}))
     mongo.db.homes.drop_indexes()
-    return render_template("homes.html", homes=result)
+   
+    return render_template("homes.html", homes = result)
+    print(homes)
 
 
 @app.route("/view_home/<id>")

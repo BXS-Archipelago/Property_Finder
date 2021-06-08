@@ -47,9 +47,9 @@
         {% endif %}
       
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2 validate" type="search"  name= "text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" href="{{ url_for('search') }}">Search</button>
+      <form class="d-flex" action = "{{ url_for('search') }}" method="POST">
+        <input class="form-control me-2 " type="search"  name= "text" placeholder="Property Search" aria-label="search">
+        <button class="btn btn-outline-success" href="{{ url_for('search') }} ">Search</button>
       </form>
     </div>
   </div>
