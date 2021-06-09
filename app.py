@@ -106,7 +106,9 @@ def logout():
 
 @app.route("/add_home", methods=["GET", "POST"])
 def add_home():
-    if request.method =="POST":     
+    if request.method =="POST": 
+         # Thanks to Johann for figuring out the following IF ELSE code to 
+        # work around a problem between Bootstrap and MongoDB    
         if not request.form.get("sale_sold"):
             sale_sold = "off"
         else:
@@ -134,6 +136,8 @@ def add_home():
 @app.route("/edit_home/<home_id>", methods =["GET", "POST"])
 def edit_home(home_id):    
     if request.method =="POST":
+        # Thanks to Johann for figuring out the following IF ELSE code to 
+        # work around a problem between Bootstrap and MongoDB
         if request.method =="POST":     
             if not request.form.get("sale_sold"):
                 sale_sold = "off"

@@ -128,5 +128,12 @@ The ads can be edited if the user wishes to change any pertinent information, or
 
 
 ## Credits
-    
+    Unsplash.com used extensively for photographs
+    For the site photo, imgp1.jpg house with orange roof, Mr Jacques Bopp as photographer. 
+    for img8.jpg, the apartment interior was taken by Karen Eads, photographer. 
+    City block picture, img8.jpg, credit goes to Terrah Holly, photographer. 
+
+    Final thanks to my mentor, Maranatha Ilesanmi for solid guidance with the project and also to Code Institute tutor, Johann for trouble-shooting an issue with Bootstrap. 
+
+
 
