@@ -181,14 +181,22 @@ body {
 }
 
 .img-thumbnail {
-    height: 150px;
-    width: 150px;
+    height: 250px;
+    width: 250px;
     box-shadow: 0 4px 4px rgba(73, 20, 20, 0.932);
 }
 
 .carousel {
     box-shadow: rgba(0, 0, 0, 0.85) 10px 5px 15px;
+    max-width: 50vw;    
     
+}
+
+.car-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkgreen;
 }
 .form-check {
     padding: 3px;

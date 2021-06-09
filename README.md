@@ -6,9 +6,10 @@
 
 
 
+
 # About The Site :
 
-With owners and selling-agents of Luxury Homes as our clients, the website is designed to attract both sellers and buyers so they can connect easily with each other.
+With both owners and estate-agents of Luxury Homes as our clients, the website is designed to attract both sellers and buyers so they can connect easily with each other.
 
 ---
 
@@ -125,6 +126,82 @@ The ads can be edited if the user wishes to change any pertinent information, or
 ## Deployment
 
     - [Heroku](https://dashboard.heroku.com/apps)
+
+
+## Testing:
+
+### Register
+    - To register a new account:   
+        - Enter Name (testuser2), Enter Password(testuser2). 
+        - Result : Success -  Flash Message appears, new account appears in MongoDB Users collection. User can proceed to next step.
+
+ ### Logging In 
+    - To Log in
+        - Click Log In, enter new name (testuser2) and new password(testuser2). 
+        - Result : Success - Flash Message appears, user can access Profile page which is not otherwise available. 
+
+
+### Creating an Advertisement
+    - To create an Ad only as a Logged in User
+        - route is add_home
+        - Check if Create Ad link is not visible should user not be logged in. 
+        - Click link for Create Ad in navigation bar. Link works.
+        - Create Ad page shows the form requesting all relevant data. 
+        - Check that some input fields have requirements, such as letters and numbers with size restrictions in the field. 
+        - Check that Bootstrap Switch Check works and sends On / Off back to MongoDB. This shows that the Ad is still For Sale or else Sold.
+        - Check MongoDB that all fields are working. 
+        - Bug : Initial problems with Bootstrap Switch. MongoDB is only receiving Null from this input. After a lot of investigation, I contact Tutor Support. Johann decided the best way forward would be to workaround it with extra code and to change the dictionary. Please see App.py and the add_home route for how this works. 
+        - Result ; Success. MongoDB is accurately receiving all data for representation. 
+
+### Check My Profile
+    - To check that the ads created only by this user can be viewed in the Profile page. 
+        - To check that the Edit and the Delete buttons are now visible to the logged in user on their ads list. 
+        - To check username appears in Header as identifier
+        - Result: Success. All fields showing as required. 
+        
+### To Edit an Advertisement
+    - route is edit_home
+    - To edit an Ad only as a logged in user. 
+    - To edit an Ad only as the person who created this ad. 
+        - Clicking Edit successfully opens the Edit page. 
+        - All fields are showing the existing data from the Ad.
+        - All text fields can be edited. 
+        - Bug - as with the create_ad  route, the Bootstrap switch is sending "Null" back to MongoDB and does not allow the check to be edited.  The same fix can be applied here as to the dictionary in the add_home route.  When applied, this error is removed and the full dictionary can be edited. 
+        - Result: Success. The Ad can be changed from status For Sale, to status Sold.  All text boxes can be edited successfully. 
+
+### To Delete an Advertisement
+    - From the Profile page, the user can see the edit button on their Ad.
+    - On clicking it, the ad is removed from their list.
+    - On clicking delete, the ad is removed from MongoDB
+    - Result : Success.  The Ad is deleted without any problem.
+
+### View all Ads 
+    - Can all ads be viewed on the Home page
+    - Can all ads be viewed when logged in or not logged in. 
+    - Result: ads can be viewed with details and button for opening full ad in a separate page. 
+    
+### Viewing individual Ads
+    - Does the View Listing button open the ad in a new page
+    - Does the Carousel rotate the three user-supplied Images
+    - Are all fields of text visible. 
+    - Bug - small bug in the responsiveness of the Bootstrap Carousel when resizing.  Adjusting CSS to make the carousel Centered above the text card. 
+    - Result :  All items read and view perfectly. 
+
+### Search function
+    - Has the index been created in MongoDB 
+    - Does the search button work with the route
+    - Does the returned list display the correct search result
+    - Result - this works very well and displays everything correctly
+
+
+## Bugs and Troubleshooting
+
+    No bugs were evident at the end of the project.  
+
+    In creating the site, I encountered a problem in creating indexes with Python on MongoDB for the purpose of searching. To get around this, I have the function in the app.py file create the index, send the request, retrieve the result for display and then using drop to delete the created index.  
+
+    To add and edit a file, the Bootstrap 5 Checkbox Switch was storing as either Null or None in MongoDB and this gave me several hours of work in trying to figure out the problem. In the end, I contacted Tutor support where 
+
 
 
 ## Credits

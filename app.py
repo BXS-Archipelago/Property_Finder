@@ -11,7 +11,6 @@ if os.path.exists("env.py"):
     import env
 
 # app is the instance of Flask
-
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
@@ -21,7 +20,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 # an instance of pymongo by adding a constructor method, so the app object communicates with the Mongo db. 
 
-mongo =PyMongo(app)
+mongo = PyMongo(app)
 
 
 
@@ -169,8 +168,7 @@ def edit_home(home_id):
 def search():
     mongo.db.homes.create_index([("category_name","text"),("list_description","text")])
     query=request.form.get('text')
-    result = list(mongo.db.homes.find({"$text": {"$search": query}}))
-    mongo.db.homes.drop_indexes()   
+    result = list(mongo.db.homes.find({"$text": {"$search": query}}))       
     return render_template("homes.html", homes = result)
    
 
