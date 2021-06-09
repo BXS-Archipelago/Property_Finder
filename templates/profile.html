@@ -6,8 +6,8 @@
 <div class="row">
 <div class="card col-md-6 offset-md-3 mt-3 bg-light">
   
-  <div class="card-body ">
-    <h3 class="card-title">{{ username }}'s Profile Page</h3>
+  <div class="card-body prof-box">
+    <h3 class="card-title profile-set align-self-center">{{ username }}'s Profile Page</h3>
     <p class="card-text">Your current advertisements are listed below</p>
    
   </div>
@@ -23,13 +23,13 @@
 <div class="col-sm-6 mt-4">
 <div class="card text-center card-shadow">
   <div class="card-header row g-0">
-      <div class="col-3 signs">
+      <div class="col-3 signs align-self-center">
           {% if home.sale_sold == "on" %}
                 <div class=" border border-dark border-1 rounded sold">Sold!</div>
                 {% else %}
                 <div class="sale border border-dark border-1 rounded">For Sale!</div>
             {% endif %}</div>
-     <h6 class="list_title col-6">{{ home.category_name }}  </h6>
+     <h6 class="list_title align-self-center col-6">{{ home.category_name }}  </h6>
      <div class="col-3 signs">
          
                 <a href="{{ url_for('delete_home', home_id=home._id) }} "
@@ -40,12 +40,12 @@
      </div>
   </div>
   <div class="card-body">
-    <h5 class="card-title">{{ home.list_title }} </h5>
+    <h5 class="card-title ">{{ home.list_title }} </h5>
     <p class="card-text">{{ home.list_description }}</p>
     <p class="card-text">{{ home.list_bedrooms }} Bedrooms</p>
     <p class="card-text">{{ home.list_price }}</p>
     <p class="card-text">{{ home.sold_by }}</p>
-    <a href="#" class="btn btn-primary">View Listing</a>
+    <a href="/view_home/{{ home._id }} " class="btn btn-primary btn-1a">View Listing</a>
   </div>
   <div class="card-footer text-muted">
     Added by: {{ home.created_by }}

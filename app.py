@@ -167,10 +167,9 @@ def search():
     mongo.db.homes.create_index([("category_name","text"),("list_description","text")])
     query=request.form.get('text')
     result = list(mongo.db.homes.find({"$text": {"$search": query}}))
-    mongo.db.homes.drop_indexes()
-   
+    mongo.db.homes.drop_indexes()   
     return render_template("homes.html", homes = result)
-    print(homes)
+   
 
 
 @app.route("/view_home/<id>")
