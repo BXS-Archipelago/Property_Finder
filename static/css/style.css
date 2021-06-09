@@ -137,17 +137,14 @@ body {
 }
 
 .edit-here {
-    background-color: #ebdfdf;
-    padding: 5px;
-    font-family: "Source Sans Pro", 'Times New Roman', Times, serif;
-    box-shadow: rgba(0, 0, 0, 0.55) 2px 2px 3px;
-    border-radius: 7px;
+    width: 80%;   
+    padding: 5px 10px;
+    font-family: "Source Sans Pro", 'Times New Roman', Times, serif;    
     font-weight: bold;
 }
 
 
-.btn-1a {
-   
+.btn-1a {   
     box-shadow: rgba(0, 0, 0, 0.55) 2px 2px 2px;
 }
 
@@ -256,6 +253,11 @@ p {
     box-shadow: rgba(0, 0, 0, 0.55) 2px 2px 2px;
 }
 
+.edit-here {
+    font-size: 1rem;
+    padding: 4px;
+   
+}
 
 
 .lead-img {
