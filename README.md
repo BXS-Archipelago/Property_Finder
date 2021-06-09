@@ -92,11 +92,41 @@ The ads can be edited if the user wishes to change any pertinent information, or
 --- 
 ## Site Surface Points
 
-
 ### Color Scheme
 
+ - Since there are inevitably going to be photographs uploaded to the site, the basic theme is a neutral color scheme to contrast with the photos and make them more vivid.  But to complement the exterior of buildings in the photos, the Navigation bar is Pasture Green (#93c178) to blend with any greenery in the photos.  The headline bars of the cards has a background #A9B7C0 which is light Grey/Blue to complement concrete or sky. The background is a very pale grey #f4f4f4 to also enhance as the photos and make colors more vivid. 
 
 ### Typography
 
+- The Font families used are a Sans Serif choice with rounded edges in contrast with any angles in the photos.  Montserrat and Source Sans Pro provide the advertising information clearly and distinctly.
 
-### Images and Visuals
+### Images
+- Images for the project come from [Unsplash.com](https://unsplash.com/) where many different photos of the interior and exterior were selected. Credits will be listed below. 
+
+## Tools used within the site: 
+
+## Framework
+
+-[Bootstrap 5.0](https://getbootstrap.com/) front-end framework was utilized in the styling of the site. 
+
+
+## Database: 
+
+    - [MongoDB.com](https://mongodb.com) was used to host the collections of data required for this project. 
+
+## Languages
+
+    -Languages Used
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [Python 3.9.5](https://www.python.org/)
+
+## Deployment
+
+    - [Heroku](https://dashboard.heroku.com/apps)
+
+
+## Credits
+    
+

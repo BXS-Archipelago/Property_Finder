@@ -63,7 +63,7 @@ body {
 
 .card-header {
     background: #a9b7c0;    
-    box-shadow: 2px 4px 4px rgba(73, 20, 20, 0.932);
+    box-shadow: 2px 4px 4px #373738;
    }
 
 .card-footer {
@@ -122,6 +122,12 @@ body {
     text-decoration: none;
     border: grey 1px solid;    
     letter-spacing: 1px;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.edit:hover {
+    box-shadow: 2px 5px 5px 0 #93c178 ;
 }
 
 .delete {
@@ -134,6 +140,12 @@ body {
     text-decoration: none;
     border: grey 1px solid;   
     letter-spacing: 1px;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.delete:hover {
+    box-shadow: 2px 5px 5px 0 #93c178 ;
 }
 
 .edit-here {
@@ -146,8 +158,13 @@ body {
 
 .btn-1a {   
     box-shadow: rgba(0, 0, 0, 0.55) 2px 2px 2px;
+    border: 2px solid grey;
 }
 
+.btn-1a:hover {
+    border: 2px solid darkgray;
+    box-shadow: 0 5px 10px 0 #3a3a36 ;
+}
 
 .info-img{
     display: flex;
@@ -159,8 +176,8 @@ body {
     align-items: center;
     justify-content: center;  
     padding: 12px;  
-   
-    box-shadow: rgba(0, 0, 0, 0.55) 2px 2px 3px;
+    margin-bottom: 5px;
+    box-shadow: rgba(0, 0, 0, 0.55)  2px 1px 2px;
 }
 
 .img-thumbnail {
