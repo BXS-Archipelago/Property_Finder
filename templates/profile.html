@@ -3,24 +3,19 @@
 {% block content %}
 
 <!-- Create BS5 Card to contain Form Inputs for Login -->
-<div class="row">
-<div class="card col-md-6 offset-md-3 mt-3 bg-light">
+<div class="hdr-holder">
   
-  <div class="card-body prof-box">
     <h3 class="card-title profile-set align-self-center">{{ username }}'s Profile Page</h3>
     <p class="card-text">Your current advertisements are listed below</p>
-   
+  
   </div>
-</div>
-</div>
-</div>
 <!--  Expanding/Collapsible Section for Each Entry -->
-<div class="row row-cols-1 row-cols-sm-2 p-3">
+<div class="row row-cols-1 row-cols-sm-2 p-2">
 
 {% for home in homes %}
 {% if session.user|lower == home.created_by|lower %}
 <div class="col-sm-3"></div>
-<div class="col-sm-6 mt-4">
+<div class="col-sm-6 col-md-10 offset-md-1 mt-4">
 <div class="card text-center card-shadow">
   <div class="card-header row g-0">
       <div class="col-3 signs align-self-center">
@@ -60,7 +55,7 @@
 <div class=" row lead-img">
     
 <div class="col-sm-12 col-md-6 mt-4 img-holder">
-<img src="../static/img/img4a.jpg" class="img-item mb-4" alt="house for sale">
+<img src="../static/img/img4a.jpg" class="img-item mb-4 img-fluid" alt="house for sale">
 </div>
 
 </div>
