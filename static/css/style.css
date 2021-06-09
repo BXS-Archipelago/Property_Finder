@@ -187,16 +187,23 @@ body {
 }
 
 .carousel {
-    box-shadow: rgba(0, 0, 0, 0.85) 10px 5px 15px;
-    max-width: 50vw;    
-    
+    box-shadow: rgba(0, 0, 0, 0.85) 10px 5px 15px;   
+    padding: 10px;    
+}
+
+.carousel-inner {
+    width: 70%;
+    height: auto; 
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .car-col {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: darkgreen;
+    flex-direction: column;
+    
 }
 .form-check {
     padding: 3px;
