@@ -5,8 +5,7 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId 
 from werkzeug.security import generate_password_hash, check_password_hash
 
-# import env package so it can be seen on Heroku. Otherwise errors due to 
-# gitignore. 
+# import env package so it can be seen on Heroku. Otherwise potential errors due to gitignore. 
 
 if os.path.exists("env.py"):
     import env
@@ -190,5 +189,5 @@ def delete_home(home_id):
 
     
 if __name__ == "__main__":
-    app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")),debug=True)
+    app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")),debug=False)
 
