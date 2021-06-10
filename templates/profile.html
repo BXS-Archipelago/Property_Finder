@@ -51,6 +51,9 @@
     <p class="card-text txt-2">{{ home.sold_by }}</p>
     <a href="/view_home/{{ home._id }} " class="btn btn-primary btn-1a">View Listing</a>    
   </div>
+  <div class="col-6 ml-auto img-cntr">
+  <img src="{{ home.list_image1 }}" class="img-thumbnail right" alt="...">
+  </div>
   <div class="card-footer text-muted">
     Added by: {{ home.created_by }}
   </div>
