@@ -106,7 +106,7 @@ The ads can be edited if the user wishes to change any pertinent information, or
 ### Images
 - Images for the project come from [Unsplash.com](https://unsplash.com/) where many different photos of the interior and exterior were selected. Credits will be listed below. 
 
-## Tools used within the site: 
+## Technologies used within the site: 
 
 ## Framework
 
@@ -130,7 +130,7 @@ The ads can be edited if the user wishes to change any pertinent information, or
     - [Heroku](https://dashboard.heroku.com/apps)
 
 
-## Testing:
+## Testing the pages:
 
 ### Register
     - To register a new account:   
