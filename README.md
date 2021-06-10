@@ -137,8 +137,10 @@ The ads can be edited if the user wishes to change any pertinent information, or
 
  ### Logging In 
     - To Log in
+        - Click Log In, use incorrect Username. Message Flash for Incorrect Username/Password.
+        - Click Log In, use correct Username, incorrect password. Message Flash for Incorrect Username/Password. 
         - Click Log In, enter new name (testuser2) and new password(testuser2). 
-        - Result : Success - Flash Message appears, user can access Profile page which is not otherwise available. 
+        - Result : Success - Flash Message appears, user can access Profile or page which is not otherwise available. 
 
 
 ### Creating an Advertisement
@@ -202,7 +204,7 @@ The ads can be edited if the user wishes to change any pertinent information, or
 
     To add and edit a file, the Bootstrap 5 Checkbox Switch was storing as either Null or None in MongoDB and this gave me several hours of work in trying to figure out the problem. In the end, I contacted Tutor support where Johann figured out a workaround for the problem. It seemed to be due to Bootstrap as the code was correct otherwise. 
      
-    I also required a little support from Sheryl in Tutor Support to resolve an issue with creating the index for the Search function. 
+    I also required a little support from Sheryl in Tutor Support to resolve an issue with creating the index for the Search function.  I was unable to get python to recognise mongo and had instead resorted to creating the index, search for result, then dropping the index via the route in App.py. However this does not realistically allow for more than one person using the search function at a time. The solution found that I was not properly importing Mongo in order to create the index in the terminal. Once that was figured out, the rest fell into place nicely. 
 
 
 ## Credits
