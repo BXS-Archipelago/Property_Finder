@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<!-- Create BS5 Card to contain Form Inputs for Login -->
+<!-- Create Card to contain Form Inputs for Login -->
 <div class="hdr-holder">
 
     <h3 class="card-title profile-set align-self-center">{{ username }}'s Profile Page</h3>
@@ -18,7 +18,9 @@
         <div class="col-sm-6 col-md-10 offset-md-1 mt-4">
             <div class="card text-center card-shadow g-0">
                 <div class="card-header row g-0 home-header">
+
                     <div class="col-sm-3"></div>
+
                     <div class="col-3 cat_name align-self-center">
 
                         <h6 class="list_title align-self-center col-6">{{ home.category_name }} </h6>
@@ -28,8 +30,8 @@
                         <a href="{{ url_for('delete_home', home_id=home._id) }} " class="delete">Delete</a>
                         <a href="{{ url_for('edit_home', home_id=home._id) }} " class="edit ">Edit</a>
                     </div>
-
                 </div>
+
                 <div class="info-img">
                     <div class="card-body col-lg-12">
                         <h5 class="card-title txt-1">{{ home.list_title }} </h5>
@@ -42,12 +44,13 @@
                             {% endif %}
 
                         </div>
-                        <p class="card-text txt-2">Description: {{ home.list_description }}</p>
-                        <p class="card-text txt-3">{{ home.list_bedrooms }} Bedrooms</p>
-                        <p class="card-text txt-4">Price €{{ home.list_price }}</p>
-                        <p class="card-text txt-2">{{ home.sold_by }}</p>
-                        <a href="/view_home/{{ home._id }} " class="btn btn-primary btn-1a">View Listing</a>
-                    </div>
+                <p class="card-text txt-2">Description: {{ home.list_description }}</p>
+                <p class="card-text txt-3">{{ home.list_bedrooms }} Bedrooms</p>
+                <p class="card-text txt-4">Price €{{ home.list_price }}</p>
+                <p class="card-text txt-2">{{ home.sold_by }}</p>
+                <a href="/view_home/{{ home._id }} " class="btn btn-primary btn-1a">View Listing</a>
+            </div>
+
                     <div class="col-6 ml-auto img-cntr">
                         <img src="{{ home.list_image1 }}" class="img-thumbnail right" alt="...">
                     </div>
@@ -57,12 +60,12 @@
                 Added by: {{ home.created_by }}
             </div>
         </div>
-
+    </div>
         <div class="col-sm-3"></div>
         {% endif %}
         {% endfor %}
-
-        </div>
+    </div>
+    
             <div class=" row lead-img">
 
                 <div class="col-sm-12 col-md-6 mt-4 img-holder">
