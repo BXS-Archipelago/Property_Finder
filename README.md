@@ -4,7 +4,7 @@
 
 ### By : Brian Smyth
 
-
+<h6><img src="./readme_files/responsivescreens.png" /></h6>
 
 
 # About The Site :
@@ -91,6 +91,8 @@ The ads can be edited if the user wishes to change any pertinent information, or
 - The Log Out function ends the user's session on the site and they must log in again to use their account. 
 
 --- 
+
+<h6><img src="./readme_files/fullscreen.png" /></h6>
 ## Site Surface Points
 
 ### Color Scheme
@@ -108,12 +110,12 @@ The ads can be edited if the user wishes to change any pertinent information, or
 
 ## Framework
 
--[Bootstrap 5.0](https://getbootstrap.com/) front-end framework was utilized in the styling of the site. 
+- [Bootstrap 5.0](https://getbootstrap.com) front-end framework was utilized in the styling of the site. 
 
 
 ## Database: 
 
-    - [MongoDB.com](https://mongodb.com) was used to host the collections of data required for this project. 
+    - [MongoDB](https://mongodb.com) was used to host the collections of data required for this project. 
 
 ## Languages
 
