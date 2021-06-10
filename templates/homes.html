@@ -32,6 +32,15 @@
   <div class="info-img">
   <div class="card-body col-lg-12">
     <h5 class="card-title txt-1">{{ home.list_title }} </h5>
+    <div class="signs">
+          
+        {% if home.sale_sold == "on" %}
+                <h3 class=" sold">Sold!</h3>
+                {% else %}
+                <h3 class="sale">For Sale!</h3>
+                {% endif %}
+            
+            </div>
     <p class="card-text txt-2">Description: {{ home.list_description }}</p>
     <p class="card-text txt-3">{{ home.list_bedrooms }} Bedrooms</p>
     <p class="card-text txt-4">Price €{{ home.list_price }}</p>

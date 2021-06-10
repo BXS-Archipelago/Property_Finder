@@ -208,6 +208,17 @@ The ads can be edited if the user wishes to change any pertinent information, or
      
     I also required a little support from Sheryl in Tutor Support to resolve an issue with creating the index for the Search function.  I was unable to get python to recognise mongo and had instead resorted to creating the index, search for result, then dropping the index via the route in App.py. However this does not realistically allow for more than one person using the search function at a time. The solution found that I was not properly importing Mongo in order to create the index in the terminal. Once that was figured out, the rest fell into place nicely. 
 
+### Responsiveness 
+- Device Testing:
+Widescreen Desktop on Dell 24" Monitor. Laptop Screen Dell XPS 15" Samsung Galaxy 10.4" Tablet Huawei 6.4" Mobile Phone Apple iPhone 4.7" Mobile Phone.
+
+Human testing: The site was tested by three other people to check functionality without issues.
+
+Online testing : https://responsivedesignchecker.com/
+Desktop 10" to 24" desktop test: Passed Tablet devices : 9 screen sizes ranging from 600 x 960 up to 1366 x 1024 Mobile phones: 10 devices of various sizes.
+
+All available screen sizes show no fault in display responsiveness.
+
 
 ## Credits
     Unsplash.com used extensively for photographs
