@@ -48,19 +48,15 @@
 
 <div class="card text-center card-shadow g-0">
   <div class="card-header row g-0">
-      <div class="col-3 signs">
-          
-        {% if home.sale_sold == "on" %}
-                <div class=" border border-dark border-1 rounded sold">Sold!</div>
-                {% else %}
-                <div class="sale border border-dark border-1 rounded">For Sale!</div>
-                {% endif %}
-            
+      <div class="col-3">                          
             </div>
-     <h6 class="list_title align-self-center col-6 home_list_cat">{{ home.category_name }}  </h6>
-     <div class="col-3 list-sider text-break"></div>
-  </div>
+     <h6 class="list_title align-self-center col-6 home_list_cat">{{ home.category_name }}  </h6>     
   <div class="card-body">
+       {% if home.sale_sold == "on" %}
+                <h6 class="rounded sold">Sold!</h6>
+                {% else %}
+                <h6 class="sale border border-dark border-1 rounded">For Sale!</h6>
+                {% endif %}
     <h5 class="card-title txt-1">{{ home.list_title }} </h5>
     <p class="card-text txt-2">{{ home.list_description }}</p>
     <p class="card-text txt-3">{{ home.list_bedrooms }} Bedrooms</p>
