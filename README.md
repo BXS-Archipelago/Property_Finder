@@ -200,8 +200,9 @@ The ads can be edited if the user wishes to change any pertinent information, or
 
     In creating the site, I encountered a problem in creating indexes with Python on MongoDB for the purpose of searching. To get around this, I have the function in the app.py file create the index, send the request, retrieve the result for display and then using drop to delete the created index.  
 
-    To add and edit a file, the Bootstrap 5 Checkbox Switch was storing as either Null or None in MongoDB and this gave me several hours of work in trying to figure out the problem. In the end, I contacted Tutor support where 
-
+    To add and edit a file, the Bootstrap 5 Checkbox Switch was storing as either Null or None in MongoDB and this gave me several hours of work in trying to figure out the problem. In the end, I contacted Tutor support where Johann figured out a workaround for the problem. It seemed to be due to Bootstrap as the code was correct otherwise. 
+     
+    I also required a little support from Sheryl in Tutor Support to resolve an issue with creating the index for the Search function. 
 
 
 ## Credits
