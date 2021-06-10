@@ -34,13 +34,22 @@
                 
      </div>
   </div>
-  <div class="card-body">
-    <h5 class="card-title ">{{ home.list_title }} </h5>
-    <p class="card-text">{{ home.list_description }}</p>
-    <p class="card-text">{{ home.list_bedrooms }} Bedrooms</p>
-    <p class="card-text">{{ home.list_price }}</p>
-    <p class="card-text">{{ home.sold_by }}</p>
-    <a href="/view_home/{{ home._id }} " class="btn btn-primary btn-1a">View Listing</a>
+   <div class="card-body col-lg-12">
+    <h5 class="card-title txt-1">{{ home.list_title }} </h5>
+    <div class="signs">
+          
+        {% if home.sale_sold == "on" %}
+                <h3 class=" sold">Sold!</h3>
+                {% else %}
+                <h3 class="sale">For Sale!</h3>
+                {% endif %}
+            
+            </div>
+    <p class="card-text txt-2">Description: {{ home.list_description }}</p>
+    <p class="card-text txt-3">{{ home.list_bedrooms }} Bedrooms</p>
+    <p class="card-text txt-4">Price €{{ home.list_price }}</p>
+    <p class="card-text txt-2">{{ home.sold_by }}</p>
+    <a href="/view_home/{{ home._id }} " class="btn btn-primary btn-1a">View Listing</a>    
   </div>
   <div class="card-footer text-muted">
     Added by: {{ home.created_by }}
