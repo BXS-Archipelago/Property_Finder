@@ -301,7 +301,9 @@ p {
     padding: 4px;
    
 }
-
+.list-sider {
+    display: none;
+}
 
 .lead-img {
     margin: 0;
