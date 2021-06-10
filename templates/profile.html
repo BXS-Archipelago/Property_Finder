@@ -10,20 +10,16 @@
   
   </div>
 <!--  Expanding/Collapsible Section for Each Entry -->
-<div class="row row-cols-1 row-cols-sm-2 p-2">
+<div class="row row-cols-1 row-cols-sm-2 p-3">
 
 {% for home in homes %}
 {% if session.user|lower == home.created_by|lower %}
 <div class="col-sm-3"></div>
 <div class="col-sm-6 col-md-10 offset-md-1 mt-4">
-<div class="card text-center card-shadow">
-  <div class="card-header row g-0">
+<div class="card text-center card-shadow g-0">
+  <div class="card-header row g-0 home-header">
       <div class="col-3 signs align-self-center">
-          {% if home.sale_sold == "on" %}
-                <div class=" border border-dark border-1 rounded sold">Sold!</div>
-                {% else %}
-                <div class="sale border border-dark border-1 rounded">For Sale!</div>
-            {% endif %}</div>
+         
      <h6 class="list_title align-self-center col-6">{{ home.category_name }}  </h6>
      <div class="col-3 signs">
          
@@ -34,6 +30,7 @@
                 
      </div>
   </div>
+  <div class="info-img">
    <div class="card-body col-lg-12">
     <h5 class="card-title txt-1">{{ home.list_title }} </h5>
     <div class="signs">
@@ -53,6 +50,7 @@
   </div>
   <div class="col-6 ml-auto img-cntr">
   <img src="{{ home.list_image1 }}" class="img-thumbnail right" alt="...">
+  </div>
   </div>
   <div class="card-footer text-muted">
     Added by: {{ home.created_by }}
