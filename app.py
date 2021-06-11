@@ -4,7 +4,7 @@ from flask import (
 from flask_pymongo import PyMongo 
 from bson.objectid import ObjectId 
 from werkzeug.security import generate_password_hash, check_password_hash
-
+from flask_paginate import Pagination, get_page_args
 
 # import env package so it can be seen on Heroku. Otherwise potential errors due to gitignore. 
 
@@ -23,13 +23,52 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+# Pagination Max 10
+PER_PAGE = 5
 
+# Paginate listings: 
+# ref https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9
+
+def paginated(homes):
+    ## extensive lists parameters
+    page, per_page, offset = get_page_args(
+                            page_parameter='page',
+                            per_page_parameter='per_page')
+    offset = page * PER_PAGE - PER_PAGE
+
+    return homes[offset: offset + PER_PAGE]
+
+
+def pagination_args(homes):
+    # Extensive listing parameters
+    page, per_page, offset = get_page_args(
+                            page_parameter='page',
+                            per_page_parameter='per_page')
+    total = len(homes)
+
+    return Pagination(page=page, per_page=PER_PAGE, total=total)
 
 @app.route("/")
 @app.route("/get_homes")
 def get_homes():
-    homes = list(mongo.db.homes.find())
-    return render_template("homes.html", homes=homes)
+    """ Returns list of Advertisements from folder, newest to oldest """
+    homes = list(mongo.db.homes.find().sort("created_on", -1))
+    categories = mongo.db.categories.find().sort("category_title", 1)
+    homes_paginated = paginated(homes)
+    pagination = pagination_args(homes)
+    return render_template(
+        "homes.html",
+        homes=homes_paginated,
+        categories=categories,
+        pagination=pagination)
+
+
+# @app.route("/")
+# @app.route("/get_homes")
+# def get_homes():
+#     homes = list(mongo.db.homes.find())
+#     return render_template("homes.html", homes=homes)
+
 
 
 @app.route("/register", methods = ["GET", "POST"])
