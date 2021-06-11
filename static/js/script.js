@@ -1,10 +1,10 @@
 
 
-var numberOfItems = $('#loop .card').length
-var limitPerPage = 4;
-$("#loop .card:gt(" + (limitPerPage  - 1) +")").hide();
-var totalPages = Math.round(numberOfItems / limitPerPage)
-$('.pagination').append("<li class='current-page page-item active'><a class='page-link' href='javascript:void()'> " + 1 + "</a></li>");
+// var numberOfItems = $('#loop .card').length
+// var limitPerPage = 4;
+// $("#loop .card:gt(" + (limitPerPage  - 1) +")").hide();
+// var totalPages = Math.round(numberOfItems / limitPerPage)
+// $('.pagination').append("<li class='current-page page-item active'><a class='page-link' href='javascript:void()'> " + 1 + "</a></li>");
 
 // for(var i = 2; i <= totalPages; i++) {
 //     $(".pagination").append("<li class = 'current-page' class='page-item'><a class='page-link' href='javascript:void()'> " + i + "</a></li>");

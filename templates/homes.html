@@ -8,16 +8,11 @@
     </div>
 </div>
 
-<!-- Bootstrap Pagination -->
-<nav aria-label="Page navigation example">
-    <ul class="pagination">
-        <li class="page-item"><a class="page-link" href="javascript:void(0)">Previous</a></li>        
-    </ul>
-</nav>
+{{ pagination.links }}
 
 <!--  Card Section for Each Entry -->
 
-    <div class="row row-cols-1 row-cols-sm-2 p-3" >
+    <div class="row row-cols-1 row-cols-sm-2" >
 
         
         <div class="col-sm-3"></div>
@@ -67,9 +62,9 @@
 </div>
 
 <!-- Pagination links generated -->
-    <div class="center-align">
+   
         {{ pagination.links }}
-    </div>
+   
 
 <div class=" row lead-img">
 
