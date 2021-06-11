@@ -195,7 +195,13 @@ The ads can be edited if the user wishes to change any pertinent information, or
     - Has the index been created in MongoDB 
     - Does the search button work with the route
     - Does the returned list display the correct search result
-    - Result - this works very well and displays everything correctly
+    - Result : this works very well and displays everything correctly
+
+### Logout 
+    - Check if user is logged out. 
+    - Check the user's profile and edit buttons are not visible anymore. 
+    - Check unable to create a new ad. 
+    - Result: This functions works to meet all requirements.
 
 
 ## Bugs and Troubleshooting
