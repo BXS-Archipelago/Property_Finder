@@ -208,8 +208,16 @@ def edit_home(home_id):
 def search():
     mongo.db.homes.create_index([("category_name","text"),("list_description","text")])
     query=request.form.get('text')
-    result = list(mongo.db.homes.find({"$text": {"$search": query}}))       
-    return render_template("homes.html", homes = result)
+    homes = list(mongo.db.homes.find().sort("created_on", -1))
+    result = list(mongo.db.homes.find({"$text": {"$search": query}}))
+    result_paginated = paginated(result)
+    pagination = pagination_args(result)
+    return render_template(
+        "homes.html",
+        homes=result_paginated,
+        
+        pagination=pagination)
+      
    
 
 
