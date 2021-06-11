@@ -2,7 +2,7 @@
 
 {% block content %}
 
-
+<!-- Row of images -->
 <div class="row mt-3">
     <div class="col-sm-3 "></div>
     <div class="min-vh-100 gallery ">
@@ -18,23 +18,26 @@
                     <img src="{{ home.list_image3 }}" class="gallery-item" >
                 </div>
             </div>
-        </div>
-    
-
-
+        </div>   
 <!-- Modal -->
 <div class="modal fade" id="gallery-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dailog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+         <h5 class="modal-title">Property Gallery</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">        
-        <img src="{{ home.list_image1 }}" class="modal-img" alt="property for sale" >
-      </div>
+      <div class="modal-body">                        
+        <img src="{{ home.list_image1 }}" class="modal-img" alt="property for sale" >             
+        </div>
+        <div class="modal-body">                        
+        <img src="{{ home.list_image2 }}" class="modal-img" alt="property for sale" >             
+        </div>
+        <div class="modal-body">                        
+        <img src="{{ home.list_image3 }}" class="modal-img" alt="property for sale" >             
+        </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
       </div>
     </div>
   </div>
@@ -46,8 +49,8 @@
 
 <div class="card text-center card-shadow g-0">
   <div class="card-header row g-0">
-      
-     <h6 class="list_title align-self-center col-6 home_list_cat">{{ home.category_name }}  </h6>
+      <div class="col-sm-3"></div>
+     <h6 class="list_title align-self-center col-6">{{ home.category_name }}  </h6>
      <div class="col-3 list-sider text-break"></div>
   </div>
   <div class="card-body">

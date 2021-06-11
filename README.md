@@ -108,10 +108,17 @@ The ads can be edited if the user wishes to change any pertinent information, or
 
 ## Technologies used within the site: 
 
+## Code
+
+- The code was created using [Gitpod](https://www.gitpod.io/))
+
 ## Framework
 
 - [Bootstrap 5.0](https://getbootstrap.com) front-end framework was utilized in the styling of the site. 
 
+## Wireframes 
+
+    - Mockups were created using [Balsamiq](https://balsamiq.com)
 
 ## Database: 
 
@@ -126,7 +133,7 @@ The ads can be edited if the user wishes to change any pertinent information, or
 - [Python 3.9.5](https://www.python.org/)
 
 ## Deployment
-
+    - [Github](https://www.github.com))
     - [Heroku](https://dashboard.heroku.com/apps)
 
 
@@ -203,6 +210,8 @@ The ads can be edited if the user wishes to change any pertinent information, or
     - Check unable to create a new ad. 
     - Result: This functions works to meet all requirements.
 
+### Pagination 
+    - For main page listing and also with searches, pagination has been tested with positive results, showing 5 cards per page as required. 
 
 ## Bugs and Troubleshooting
 
@@ -226,13 +235,33 @@ Desktop 10" to 24" desktop test: Passed Tablet devices : 9 screen sizes ranging 
 All available screen sizes show no fault in display responsiveness.
 
 
+
+## Publishing and Deployment 
+The site is deplyed through Heroku at 
+
+    https://propertyfinder-ms3.herokuapp.com/
+
+
+
+This website was also published using GitHub Pages. The procedure is outlined below.
+
+The site can be forked or cloned where appropriate. If you wish to make amendments to the site, please use the Forking option without affecting the main branch of code.
+
+
 ## Credits
+    For pagination instruction, Code Institute Slack page members recommended this straightforward tutorial.  
+
+    https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9
+
+    Credit to Mr Huang Huang for creating that and posting to Github.     
+     
     Unsplash.com used extensively for photographs
-    For the site photo, imgp1.jpg house with orange roof, Mr Jacques Bopp as photographer. 
+    For the site photo,house-for-sale-pixabay.jpg , Mr Jacques Bopp as photographer is royalty-free to use from Pixabay.com
+
     for img8.jpg, the apartment interior was taken by Karen Eads, photographer. 
     City block picture, img8.jpg, credit goes to Terrah Holly, photographer. 
 
-    Final thanks to my mentor, Maranatha Ilesanmi for solid guidance with the project and also to Code Institute tutor, Johann for trouble-shooting an issue with Bootstrap. 
+    Final thanks to my mentor, Maranatha Ilesanmi for solid guidance with the project and also to Code Institute tutors, Johann and Sheryl for trouble-shooting some small obstacles encountered along the way.  
 
 
 

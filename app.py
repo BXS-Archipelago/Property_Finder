@@ -62,7 +62,7 @@ def get_homes():
         categories=categories,
         pagination=pagination)
 
-
+# Pre- Pagination route for reference. 
 # @app.route("/")
 # @app.route("/get_homes")
 # def get_homes():
@@ -174,7 +174,7 @@ def add_home():
 @app.route("/edit_home/<home_id>", methods =["GET", "POST"])
 def edit_home(home_id):    
     if request.method =="POST":
-        # Thanks to Johann for figuring out the following IF ELSE code to 
+        # Thanks to Johann for figuring out the following IF/ELSE code to 
         # work around a problem between Bootstrap and MongoDB
         if request.method =="POST":     
             if not request.form.get("sale_sold"):
@@ -235,5 +235,5 @@ def delete_home(home_id):
 
     
 if __name__ == "__main__":
-    app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")),debug=True)
+    app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")),debug=False)
 
