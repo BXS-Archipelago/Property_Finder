@@ -6,7 +6,7 @@
 <div class="hdr-holder">
 
     <h3 class="card-title profile-set align-self-center">{{ username }}'s Profile Page</h3>
-    <p class="card-text">Here you can edit or delete your Ads</p>
+    <p class="card-text">Here you can edit or delete your Property Ads</p>
 
 </div>
 <!--  Expanding/Collapsible Section for Each Entry -->
@@ -23,7 +23,7 @@
 
                     <div class="col-6 cat_name align-self-center">
 
-                        <h6 class="list_title align-self-center col-8">{{ home.category_name }} </h6>
+                        <h6 class="list_title">{{ home.category_name }} </h6>
                     </div>
                     <div class="col-3 signs">
 
@@ -34,7 +34,7 @@
 
                 <div class="info-img">
                     <div class="card-body col-lg-12">
-                        <h5 class="card-title txt-1">{{ home.list_title }} </h5>
+                        
                         <div class="signs">
 
                             {% if home.sale_sold == "on" %}
@@ -42,13 +42,13 @@
                             {% else %}
                             <h3 class="sale">For Sale!</h3>
                             {% endif %}
-
+                            <h5 class="card-title txt-1">{{ home.list_title }} </h5>
                         </div>
                 <p class="card-text txt-2">Description: {{ home.list_description }}</p>
                 <p class="card-text txt-3">{{ home.list_bedrooms }} Bedrooms</p>
                 <p class="card-text txt-4">Price €{{ home.list_price }}</p>
                 <p class="card-text txt-2">{{ home.sold_by }}</p>
-                <a href="/view_home/{{ home._id }} " class="btn btn-primary btn-1a">View Listing</a>
+                <a href="/view_home/{{ home._id }} " class="btn btn-light btn-1a">View Listing</a>
             </div>
 
                     <div class="col-6 ml-auto img-cntr">
@@ -66,10 +66,10 @@
         {% endfor %}
     </div>
 
-            <div class=" row lead-img">
+            <div class="container-sm lead-img">
 
                 <div class="col-sm-12 col-md-6 mt-4 img-holder">
-                    <img src="../static/img/img4a.jpg" class="img-item mb-4 img-fluid" alt="house for sale">
+                    <img src="../static/img/house-for-sale-pixabay.jpg" class="img-item mb-4 img-fluid" alt="house for sale">
                 </div>
 
     </div>

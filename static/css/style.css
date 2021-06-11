@@ -37,6 +37,7 @@ body {
 
 .img-item {
     box-shadow: 4px 4px 4px 4px grey;
+    max-height: 300px;
 }
 
 .card-shadow {
@@ -65,7 +66,10 @@ body {
     background: #a9b7c0;    
     box-shadow: 2px 4px 4px #373738;
    }
-
+.card-title {
+    text-transform: uppercase;
+    margin-left: 20px;
+}
 .card-footer {
     background-color: #f5f1f2d3;
     font-weight: bold;
@@ -108,6 +112,7 @@ body {
     padding: 5px;
     width: 100px;
     box-shadow: rgba(0, 0, 0, 0.55) 2px 2px 3px;
+    margin-right: 20px;
 } 
 
 .sale {
@@ -117,11 +122,14 @@ body {
     padding: 5px;
     width: 100px;
     box-shadow: rgba(0, 0, 0, 0.55) 2px 2px 3px;
+    margin-right: 20px;
 }
 
 .signs {
     padding: 6px;
-    }
+    display: flex;
+    flex-direction: row;
+}
 
 .edit {
     color: #000;
@@ -146,8 +154,13 @@ body {
     padding: 5px 10px;
     font-family: "Source Sans Pro", 'Times New Roman', Times, serif;    
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
+.cancel a {
+    text-decoration: none;
+    color: #000;
+}
 
 .btn-1a {   
     box-shadow: rgba(0, 0, 0, 0.55) 2px 2px 2px;
@@ -206,7 +219,7 @@ img {
     width: 100%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 993px) {
 
 
 .flashes h4 {    
@@ -258,7 +271,7 @@ p {
 
 .list_title {
     font-size: 1rem;
-    letter-spacing: normal;
+    letter-spacing: 1.1px;
 }
 
 
@@ -300,6 +313,7 @@ p {
 
 .lead-img {
     margin: 0;
+    width: 100%;
 }
 
 .footer-text {

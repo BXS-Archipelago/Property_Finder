@@ -128,8 +128,9 @@
                 <!-- button -->
                 <div class="class">
                     <button type="submit" class="text-shadow">
-                        EDIT
+                        SUBMIT
                     </button>
+                <button class="text-shadow cancel"><a href="{{ url_for('profile', username=session['user']) }}" >CANCEL</a></button>
 </form>
 </div>
 

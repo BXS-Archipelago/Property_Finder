@@ -2,69 +2,74 @@
 
 {% block content %}
 <div class=" row  lead-img g-0">
-    
-<div class="col-sm-6 col-md-6 mt-4 img-holder">
-<img src="../static/img/house-for-sale.jpg" class="img-item img-fluid" alt="house for sale">
-</div>
-</div>
 
-
-<!--  Card Section for Each Entry -->
-<div class="row row-cols-1 row-cols-sm-2 p-3">
-
-{% for home in homes %}
-    <div class="col-sm-3"></div>
-<div class="col-sm-6  col-md-10 offset-md-1 mt-4">
-    <div class="card text-center card-shadow g-0">
-        <div class="card-header row g-0 home-header">
-
-            <div class="col-sm-3"></div>
-
-            <h6 class="list_title align-self-center col-6">{{ home.category_name }} </h6>
-            <div class="col-3"></div>
-        </div>
-
-
-        <div class="info-img">
-            <div class="card-body col-lg-12">
-                <h5 class="card-title txt-1">{{ home.list_title }} </h5>
-                  <div class="signs">
-
-                    {% if home.sale_sold == "on" %}
-                    <h3 class=" sold">Sold!</h3>
-                    {% else %}
-                    <h3 class="sale">For Sale!</h3>
-                    {% endif %}
-
-                </div>
-                <p class="card-text txt-2">Description: {{ home.list_description }}</p>
-                <p class="card-text txt-3">{{ home.list_bedrooms }} Bedrooms</p>
-                <p class="card-text txt-4">Price €{{ home.list_price }}</p>
-                <p class="card-text txt-2">{{ home.sold_by }}</p>
-                <a href="/view_home/{{ home._id }} " class="btn btn-primary btn-1a">View Listing</a>
-            </div>
-
-            <div class="col-6 ml-auto img-cntr">
-                <img src="{{ home.list_image1 }}" class="img-thumbnail right" alt="...">
-            </div>
-        </div>
-        <div class="card-footer text-muted footer-text">
-            Added by: {{ home.created_by }}
-        </div>
+    <div class="col-sm-6 col-md-6 mt-4 img-holder">
+        <img src="../static/img/house-for-sale.jpg" class="img-item img-fluid" alt="house for sale">
     </div>
 </div>
-<div class="col-sm-3"></div>
-{% endfor %}
-</div>
 
-<div class=" row lead-img">
-    
-<div class="col-sm-12 col-md-6 mt-4 img-holder">
-<img src="../static/img/img8.jpg" class="img-item mb-4 img-fluid" alt="house for sale">
+<!-- Bootstrap Pagination -->
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">Previous</a></li>        
+    </ul>
+</nav>
+
+<!--  Card Section for Each Entry -->
+
+    <div class="row row-cols-1 row-cols-sm-2 p-3" >
+
+        {% for home in homes %}
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6  col-md-10 offset-md-1 mt-4" id="loop">
+            <div class="card text-center card-shadow g-0">
+                <div class="card-header row g-0 home-header">
+
+                    <div class="col-sm-3"></div>
+
+                    <h6 class="list_title align-self-center col-6">{{ home.category_name }} </h6>
+                    <div class="col-3"></div>
+                </div>
+
+
+                <div class="info-img">
+                    <div class="card-body col-lg-12">
+
+                        <div class="signs">
+
+                            {% if home.sale_sold == "on" %}
+                            <h3 class=" sold">Sold!</h3>
+                            {% else %}
+                            <h3 class="sale">For Sale!</h3>
+                            {% endif %}
+                            <h5 class="card-title txt-1">{{ home.list_title }} </h5>
+                        </div>
+                        <p class="card-text txt-2"> Description: {{ home.list_description }}</p>
+                        <p class="card-text txt-3">{{ home.list_bedrooms }} Bedrooms</p>
+                        <p class="card-text txt-4">Price €{{ home.list_price }}</p>
+                        <p class="card-text txt-2">{{ home.sold_by }}</p>
+                        <a href="/view_home/{{ home._id }} " class="btn btn-light btn-1a">View Listing</a>
+                    </div>
+
+                    <div class="col-6 ml-auto img-cntr">
+                        <img src="{{ home.list_image1 }}" class="img-thumbnail right" alt="...">
+                    </div>
+                </div>
+                <div class="card-footer text-muted footer-text">
+                    Added by: {{ home.created_by }}
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3"></div>
+        {% endfor %}
+    </div>
 </div>
+<div class=" row lead-img">
+
+    <div class="col-sm-12 col-md-6 mt-4 img-holder">
+        <img src="../static/img/img8.jpg" class="img-item mb-4 img-fluid" alt="house for sale">
+    </div>
 
 </div>
 
 {% endblock %}
-
- 
